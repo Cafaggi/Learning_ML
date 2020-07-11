@@ -1,8 +1,24 @@
 class rectangle:
     def __init__ (self, width, heigth):
-        self.width = width
-        self.heigth = heigth
+        self._width = width
+        self._heigth = heigth
     
+    @property
+    def width(self):
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        self._width = width
+
+    @property
+    def heigth(self):
+        return self._heigth
+
+    @heigth.setter
+    def heigth(self, heigth):
+        self._heigth = heigth
+
     def area(self):
         return self.width * self.heigth
     
